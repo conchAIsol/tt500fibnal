@@ -1,0 +1,246 @@
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+body{
+    overflow: hidden;
+   
+    background: linear-gradient(90deg, rgba(152,42,132,1) 0%, rgba(255,124,83,1) 50%, rgba(207,69,69,1) 92%);
+    background-size: 200% 100%; /* This is important for the animation */
+    background-repeat: no-repeat; /* Prevents repetition of the background */
+    animation: gradient 2s ease infinite
+}
+
+#enter{
+    top: 0%;
+    position: absolute;
+    z-index: 200;
+    height: 100%;
+    width: 100%;
+    left: 0%;
+    background-color: red;
+    opacity: 80%;
+}
+
+#enterbutton{
+    position: relative;
+    left: 45%;
+    top: 50%;
+    border: 2px solid black;
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+
+#header-container{
+    text-align: center;
+    margin: 0;
+    background: none;
+    height: 200px;
+}
+
+#title{
+    position: relative;
+    font-size: 40px;
+    color: white;
+    font-family: 'basic';
+    margin-bottom: 0;
+}
+
+#slogan{
+    margin-top: 0;
+    color: white;
+    font-family: basic;
+    font-size: 30px;
+}
+
+
+
+#maincontainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#pro-wallets{
+    overflow-y: scroll;
+    padding: 5px;
+}
+
+#pro-wallets::-webkit-scrollbar{
+    width: 0.5vw;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px;
+}
+
+#pro-wallets::-webkit-scrollbar-track{
+    background-color: #313043;
+}
+
+#pro-wallets::-webkit-scrollbar-thumb{
+    background-color: #777;
+    border-radius: 20px;
+
+}
+
+.full-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    width: 60vw;
+    left: 20%;
+    
+}
+
+#currently-trending-title{
+    position: relative;
+    color: white;
+    font-size: 30px;
+    font-family: basic;
+}
+
+#currently-trending{
+    overflow-y: scroll;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    padding: 5px;
+}
+
+
+
+
+
+@font-face{
+    font-family: 'basic';
+    src: url('NewakeFont-Demo.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#pro-wallet-title{
+    position: relative;
+    color: white;
+    font-size: 30px;
+    font-family: basic;
+}
+
+.wallet{
+    display: flex;
+    flex-direction: row;
+    background-color: #020118;
+    width: 100%;
+    height: 100px;
+}
+
+.wallet:hover{
+    outline: 2px solid lightgreen;
+}
+
+.wallet .pfp{
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 50%;
+}
+
+.wallet #name{
+    color: white;
+    font-family: 'basic';
+    margin-bottom: 0px;
+}
+
+.wallet .view{
+    position: relative;
+    right: 5%;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 15px;
+    width: 80px;
+    height: 30px;
+    background-color: lightblue;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.copy{
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    position: relative;
+    top: 12px;
+}
+
+.wallet #desc{
+    color: grey;
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.wallet #walletinfo{
+    display: block;
+}
+
+.pfp{
+
+    position: relative;
+    height: 64px;
+    width: 64px;
+}
+
+#profile-info{
+    text-align: center;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 500px;
+    width: 500px;
+    background-color: #101010;
+    z-index: 20;
+    visibility: hidden;
+    border-radius: 20px;
+    outline: 2px solid lightgreen;
+}
+
+#profile-info #ppfp{
+    display:block;
+    position: relative;
+    border-radius: 50%;
+    border: 2px solid lightgreen;
+    height: 128px;
+    width: 128px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#profile-info #pname{
+    font-family: 'basic';
+    font-size: 30px;
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
